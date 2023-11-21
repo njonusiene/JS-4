@@ -23,15 +23,12 @@ var map = [
 ]
 
 for(var i = 0; i < map.length; i++){
+    likes(map[i].country, map[i].size, map[i].people);
+}
 
-    likes(map[i].country, map[i].size, map[i].people)
-    }
-    
-    function likes(country, size, people){
-        
-        var square = map[i].size / map[i].people
-    
-        console.log("Šalis: " + country + ", joje gyvena " + people + " mln. gyventojų."),
-        console.log("Valstybės plotas: " + size + " km², plotas tenkantis vienam gyventojui: " + square.toFixed(2) + " m²"),
-        console.log("==================")
-    }
+function likes(country, size, people){
+    var square = (size * 1000000) / people; // konvertuojame km² į m²
+    console.log("Šalis: " + country + ", joje gyvena " + people + " mln. gyventojų.");
+    console.log("Valstybės plotas: " + size + " km², plotas tenkantis vienam gyventojui: " + square.toFixed(2) + " m²");
+    console.log("==================");
+}
