@@ -24,10 +24,10 @@ var map = [
 
 for(var i = 0; i < map.length; i++){
 
-    likes(map[i].country, map[i].people, map[i].size)
+    likes(map[i].country, map[i].size, map[i].people)
     }
     
-    function likes(country, people, size){
+    function likes(country, size, people){
         
         var square = map[i].size / map[i].people
     
